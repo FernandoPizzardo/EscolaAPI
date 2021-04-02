@@ -10,10 +10,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/olamundo")
-public class EscolaMController {
-    private final List<Message> messages;
-    public EscolaMController(){
-        this.messages = new ArrayList<>();
+public class EscolaMController  {
+  private final List<Message> messages;
+    public EscolaMController() throws AlunoNaoEncontradoException{
+        // AlunoService buscaAluno = new AlunoService();
+        // buscaAluno.findAluno("Frederico");
+         this.messages = new ArrayList<>();
         Message aluno1 = new Message( 1, "Luna");
         Message aluno2 = new Message( 2, "Fernando");
         Message aluno3 = new Message( 3, "Saori");
